@@ -31,8 +31,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
-  font_awesome_flutter: 
+  font_awesome_flutter: null
   get: ^4.6.6
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_lints: ^4.0.0
@@ -61,8 +62,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
+  fonts:
+    - family: GT Sectra Fine
+      fonts:
+        - asset: assets/fonts/GT Sectra Fine Regular.ttf
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf

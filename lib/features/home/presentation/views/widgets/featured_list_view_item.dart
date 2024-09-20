@@ -1,4 +1,3 @@
-
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +9,7 @@ class FeaturedListViewItem extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.sizeOf(context).height * .3,
       child: AspectRatio(
-        aspectRatio: 2.7 / 4,
+        aspectRatio: 2.6 / 4,
         child: Container(
           decoration: BoxDecoration(
               color: Colors.red,

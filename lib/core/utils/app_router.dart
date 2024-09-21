@@ -8,7 +8,7 @@ abstract class AppRouter {
   static const kHomeViewPath = '/homeView';
   static const kBookDetailsViewPath = '/bookDetailsView';
   static const kSearchViewPath = '/searchView';
-  static final  router = GoRouter(
+  static final router = GoRouter(
     routes: [
       GoRoute(
         path: '/',

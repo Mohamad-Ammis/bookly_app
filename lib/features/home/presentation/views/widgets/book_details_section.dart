@@ -11,7 +11,7 @@ class BookDetailsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const FeaturedListViewItem(),
+        const CustomBookImage(),
         const SizedBox(
           height: 40,
         ),
@@ -28,7 +28,7 @@ class BookDetailsSection extends StatelessWidget {
           height: 18,
         ),
         const BookRating(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center, rating: 0,count: 0,
         ),
         const SizedBox(
           height: 38,

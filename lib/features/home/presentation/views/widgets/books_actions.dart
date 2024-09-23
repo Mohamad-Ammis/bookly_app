@@ -1,16 +1,18 @@
+import 'package:bookly_app/core/utils/functions/launch_custom_url.dart';
 import 'package:bookly_app/core/widgets/custom_button.dart';
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 class BookActions extends StatelessWidget {
-  const BookActions({super.key});
-
+  const BookActions({super.key, required this.book});
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
               child: CustomButton(
             backgroundColor: Colors.white,
             textColor: Colors.black,
@@ -20,13 +22,18 @@ class BookActions extends StatelessWidget {
           )),
           Expanded(
               child: CustomButton(
-            backgroundColor: Color(0xffEF8262),
+            onPressed: () async {
+              await launchCustomUrl(context, book.volumeInfo.previewLink);
+            },
+            backgroundColor: const Color(0xffEF8262),
             textColor: Colors.white,
             fontSize: 16,
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(12),
                 bottomRight: Radius.circular(12)),
-            text: 'Free Preview',
+            text: book.volumeInfo.previewLink != null
+                ? 'Free Preview'
+                : 'not avaliable',
           )),
         ],
       ),

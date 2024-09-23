@@ -14,14 +14,14 @@ class NewestBookListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kBookDetailsViewPath);
+        GoRouter.of(context).push(AppRouter.kBookDetailsViewPath,extra: book);
       },
       child: SizedBox(
         height: 130,
         child: Row(
           children: [
             CustomBookImage(
-              image: book.volumeInfo.imageLinks.thumbnail,
+              image: book.volumeInfo.imageLinks?.thumbnail??'',
             ),
             const SizedBox(
               width: 30,

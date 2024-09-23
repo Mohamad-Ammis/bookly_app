@@ -16,7 +16,7 @@ class BookActions extends StatelessWidget {
             textColor: Colors.black,
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(16), bottomLeft: Radius.circular(16)),
-            text: r'19.99$',
+            text: 'Free',
           )),
           Expanded(
               child: CustomButton(

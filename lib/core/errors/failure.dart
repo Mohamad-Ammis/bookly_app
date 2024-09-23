@@ -46,8 +46,7 @@ class ServerFaliure extends Faliure {
       try {
       return ServerFaliure(errorMessage: resposne['error']['message']);        
       } catch (e) {
-        debugPrint('e: ${e}');
-        
+        debugPrint('e: ${e.toString()}');        
       return ServerFaliure(errorMessage: 'Error happened , please try again!');
       }
     } else if (statusCode == 404) {
